@@ -1,0 +1,7 @@
+<h1>Create your new topic</h1>
+
+<%= form_with model: @topic do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <%= f.submit %>
+<% end %>
