@@ -2,6 +2,9 @@
 
 <ul>
   <% @topics.each do |topic| %>
-    <li><%= topic.name %></li>
+    <li><%= link_to topic.name , topic_path(topic) %></li>
+    <%= link_to "Edit your topic", edit_topic_path(topic) %>
   <% end %>
 </ul>
+
+<%= link_to "Create a new chapter", new_topic_path %>

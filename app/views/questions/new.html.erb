@@ -1,0 +1,9 @@
+<h1>Create your question</h1>
+
+<%= simple_form_for [@topic, @question] do |f| %>
+  <%= f.input :title %>
+  <%= f.input :mcq %>
+  <%= f.input :answer %>
+  <%= f.input :explanation%>
+  <%= f.submit "Post question", class: "btn btn-primary" %>
+<% end %>
