@@ -15,6 +15,12 @@ class QuestionsController < ApplicationController
     end
   end
 
+  def destroy
+    @question = Question.find(params[:id])
+    @question.destroy
+    redirect_to topic_path(@question.topic), status: :see_other
+  end
+
   private
 
   def set_topic
